@@ -2,11 +2,11 @@
 
 ## Prerequisites
 
-- [ ] For the purposes of this exercise a trial [Artifactory](https://aduckpond.jfrog.io) instance was created and the `pom.xml` was modified to point at repositories within that instance. 
-- [ ] Jenkins installed and running with suggested plugins installed. (`DinD` is not recommended for this workflow).
-- [ ] OpenJDK version 17.
-- [ ] Docker installed and running.
-- [ ] Ensure Jenkins has the correct permissions to execute a Docker Build (for details see the `Building the Docker Image` section below).
+- For the purposes of this exercise a trial [Artifactory](https://aduckpond.jfrog.io) instance was created and the `pom.xml` was modified to point at repositories within that instance. 
+- Jenkins installed and running with suggested plugins installed. (`DinD` is not recommended for this workflow).
+- OpenJDK version 17.
+- Docker installed and running.
+- Ensure Jenkins has the correct permissions to execute a Docker Build (for details see the `Building the Docker Image` section below).
 
 ### Building the Docker Image
 
@@ -14,7 +14,7 @@ To successfully build the Docker image, ensure that the Docker daemon is install
 
 You may also need to add the Jenkins user to the docker group for the build command to execute successfully. You can do that by executing the following command (on the Jenkins host in this example) and restarting Jenkins:
 
-```sudo usermod -aG docker Jenkins```
+```sudo usermod -aG docker jenkins```
 
 ## The Jenkins Pipeline Explained
 
