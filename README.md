@@ -33,7 +33,7 @@ To create the Jenkins pipeline we will copy the contents of the Jenkinsfile into
 1. Ensure you are logged into Jenkins.
 2. From the Jenkins Dashboard click the `New Item` button.
 3. Enter a name for your Jenkins pipeline (something like `myPetclinic` should work nicely; this name will be used to reference the project in this example).
-4. Select Pipeline and click ok to continue to the Pipeline configuration page.
+4. Select `Pipeline` and click `OK` to continue to the Pipeline configuration page.
 5. Click on the `Pipeline` tab to the left under `Confiure`.
 6. In the `Pipeline Definition` drop down select `Pipeline script from SCM`.
 7. Select `Git` in the `SCM` drop down.
