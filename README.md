@@ -44,17 +44,6 @@ To create the Jenkins pipeline we will copy the contents of the Jenkinsfile into
 
 For more details on options for deploying a Jenkins pipeline see this page: [Getting started with Pipeline](https://www.jenkins.io/doc/book/pipeline/getting-started/)
 
-### The Jenkins Pipeline Explained
-
-This Jenkins pipeline has four main steps: Compile, Test, Package, and Docker Build.
-
-![Alt text](./jenkinsPipeline.jpg)
-
-+ Compile: Executes `mvn compile` against the code in the spring-petclinic repository.
-+ Test: Executes `mvn test` executes the tests included in the spring-petclinic project.
-+ Package: Executes `mvn package`. Packages the application into an executable jar for use in the next step.
-+ Docker Build: Uses the `Dockerfile` stored in the spring-petclinic repo to build an executable container image.
-
 ## Instructions for Running the Built Container
 
 ### Running the Container
