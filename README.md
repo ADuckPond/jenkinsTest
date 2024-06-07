@@ -25,7 +25,7 @@ This Jenkins pipeline has four main steps: Compile, Test, Package, and Docker Bu
 
 ![Alt text](./jenkinsPipeline.jpg)
 
-    - &nbsp; Compile: Executes mvn compile against the code in the spring-petclinic repository.
+    - [ ] Compile: Executes mvn compile against the code in the spring-petclinic repository.
     + Test: Executes mvn test executes the tests included in the spring-petclinic project.
     + Package: Packages the application into an executable jar for use in the next step.
     + Docker Build: uses the Dockerfile stored in the spring-petclinic repo to build an executable container image.
