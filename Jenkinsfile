@@ -5,11 +5,11 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Compile') {
             steps {
                 //get petclinic application
                 git branch: "${params.BRANCH}", url: 'https://github.com/ADuckPond/spring-petclinic.git'
-                sh './mvnw compile'
+                sh './mvnw compile'                    
             }
         }
         stage('Test') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh './mvnw spring-boot:build-image'
+                sh 'docker build -t agerlitz/petclinic:latest .'
             }
         }
     }
