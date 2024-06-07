@@ -18,3 +18,9 @@ In this example, bothe the Docker daemon and Jenkins are running on the local ma
 
 For more detailed information about the Spring Petclinic application see the following git repository:
 <https://github.com/ADuckPond/spring-petclinic>
+
+## The Jenkins Pipeline Explained
+
+Text here
+
+![Alt text](./jenkinsPipeline.jpg)
