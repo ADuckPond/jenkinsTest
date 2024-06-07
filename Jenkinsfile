@@ -11,12 +11,12 @@ pipeline {
                 sh './mvnw compile'                    
             }
         }
-        //stage('Test') {
-        //    steps {
-        //        //execute defined tests
-        //        sh './mvnw test'
-        //    }
-        //}
+        stage('Test') {
+            steps {
+                //execute defined tests
+                sh './mvnw test'
+            }
+        }
         stage('Package') {
             steps {
                 //build the executable jar skipping tests given previous test execution
