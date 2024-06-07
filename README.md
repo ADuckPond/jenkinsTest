@@ -55,7 +55,7 @@ To run the container built from this Jenkins pipeline, use the following command
 
 ```docker run -d -p 8081:8080 mypetclinic:latest```
 
-In this example, both the Docker daemon and Jenkins are running on the local machine. As a result, applications and running containers are reachable on localhost. To access the application, open a web browser and navigate to [localhost:8081](localhost:8081).
+In this example, both the Docker daemon and Jenkins are running on the local machine. As a result, applications and running containers are reachable on localhost. To access the application, open a web browser and navigate to <http://localhost:8081>.
 
 For more detailed information about the Spring Petclinic application see the following git repository:
 <https://github.com/ADuckPond/spring-petclinic>
