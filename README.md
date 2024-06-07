@@ -1,4 +1,4 @@
-# jenkinsTest
+# Spring Petclinic via Jenkins Pipeline
 
 ## Building the Docker Image
 
