@@ -33,6 +33,7 @@ This Jenkins pipeline has four main steps: Compile, Test, Package, and Docker Bu
 ### More Information on the Dockerfile
 
 The Dockerfile used in the Docker Build step is also included in this repository. It consist of four commands:
+
     - FROM: Specifies the base image to start from (in this case openjdk:23-ea-jdk-oracle) 
     - ADD: Brings the contents of the target directory into the container. This is where the executable jar is after the Package step.
     - WORKDIR: Specifies the directory to switch to and work from (in this case we switch to the location of the files we brought over via ADD).
