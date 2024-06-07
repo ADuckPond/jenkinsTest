@@ -10,27 +10,34 @@ You may also need to add the Jenkins user to the docker group for the build comm
 
 ```sudo usermod -aG docker Jenkins```
 
-### Running the Container
+## The Jenkins Pipeline Explained
 
-To run the container built from this Jenkins pipeline, use the following command:
+This Jenkins pipeline has four main steps: Compile, Test, Package, and Docker Build.
 
-```docker run -d -p 8081:8080 agerlitz/petclinic:latest```
+![Alt text](./jenkinsPipeline.jpg)
 
-In this example, both the Docker daemon and Jenkins are running on the local machine. As a result, applications and running containers are reachable on localhost. To access the application, open a web browser and navigate to localhost:8081.
++ Compile: Executes `mvn compile` against the code in the spring-petclinic repository.
++ Test: Executes `mvn test` executes the tests included in the spring-petclinic project.
++ Package: Executes `mvn package`. Packages the application into an executable jar for use in the next step.
++ Docker Build: Uses the `Dockerfile` stored in the spring-petclinic repo to build an executable container image.
 
-For more detailed information about the Spring Petclinic application see the following git repository:
-<https://github.com/ADuckPond/spring-petclinic>
-
-## Instructions for Creating the Jenkins Pipeline
+## Instructions for Creating and Executing the Jenkins Project
 
 To create the Jenkins pipeline we will copy the contents of the Jenkinsfile into a new Jenkins pipeline:
 
 1. Ensure you are logged into Jenkins.
 2. From the Jenkins Dashboard click the `New Item` button.
-3. Enter a name for your Jenkins pipeline (something like `myPetclinic` should work nicely).
-4. Select Pipeline 
+3. Enter a name for your Jenkins pipeline (something like `myPetclinic` should work nicely; this name will be used to reference the project in this example).
+4. Select Pipeline and click ok to continue to the Pipeline configuration page.
+5. Click on the `Pipeline` tab to the left under `Confiure`.
+6. In the `Pipeline Definition` drop down select `Pipeline script from SCM`.
+7. Select `Git` in the `SCM` drop down.
+8. Add the git url for this repository (<https://github.com/ADuckPond/jenkinsTest.git>) in the `Repository URL` field. (No `Credentials` needed.)
+9. Update the `Branch Specifier` under the `Branches to build` section to `*/main`.
+10. Scroll to the bottom of the page and click `Save`. This will take you to the `myPetclinic Project` page (if you used that name).
+11. From the `myPetclinic Project` page click the `Build Now` button.
 
-For more details on options for deploying a Jenkins pipeline see this page: [Getting started with Pipeline]<https://www.jenkins.io/doc/book/pipeline/getting-started/>
+For more details on options for deploying a Jenkins pipeline see this page: [Getting started with Pipeline](https://www.jenkins.io/doc/book/pipeline/getting-started/)
 
 ### The Jenkins Pipeline Explained
 
@@ -38,10 +45,25 @@ This Jenkins pipeline has four main steps: Compile, Test, Package, and Docker Bu
 
 ![Alt text](./jenkinsPipeline.jpg)
 
-+ Compile: Executes mvn compile against the code in the spring-petclinic repository.
-+ Test: Executes mvn test executes the tests included in the spring-petclinic project.
-+ Package: Packages the application into an executable jar for use in the next step.
-+ Docker Build: Uses the Dockerfile stored in the spring-petclinic repo to build an executable container image.
++ Compile: Executes `mvn compile` against the code in the spring-petclinic repository.
++ Test: Executes `mvn test` executes the tests included in the spring-petclinic project.
++ Package: Executes `mvn package`. Packages the application into an executable jar for use in the next step.
++ Docker Build: Uses the `Dockerfile` stored in the spring-petclinic repo to build an executable container image.
+
+## Instructions for Running the Built Container
+
+### Running the Container
+
+To run the container built from this Jenkins pipeline, use the following command on the host where the build was executed:
+
+```docker run -d -p 8081:8080 myPetclinic:latest```
+
+In this example, both the Docker daemon and Jenkins are running on the local machine. As a result, applications and running containers are reachable on localhost. To access the application, open a web browser and navigate to localhost:8081.
+
+For more detailed information about the Spring Petclinic application see the following git repository:
+<https://github.com/ADuckPond/spring-petclinic>
+
+## Additional Information
 
 ### More Information on the Dockerfile
 
