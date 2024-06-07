@@ -1,6 +1,8 @@
 # Spring Petclinic via Jenkins Pipeline
 
-## Building the Docker Image
+## Prerequisites
+
+### Building the Docker Image
 
 To successfully build the Docker image, ensure that the Docker daemon is installed and running in the environment where Jenkins is executing the pipeline. In this example, the pipeline is executed on the localhost where Jenkins and the Docker daemon are installed.
 
@@ -8,7 +10,7 @@ You may also need to add the Jenkins user to the docker group for the build comm
 
 ```sudo usermod -aG docker Jenkins```
 
-## Running the Container
+### Running the Container
 
 To run the container built from this Jenkins pipeline, use the following command:
 
@@ -19,7 +21,9 @@ In this example, both the Docker daemon and Jenkins are running on the local mac
 For more detailed information about the Spring Petclinic application see the following git repository:
 <https://github.com/ADuckPond/spring-petclinic>
 
-## The Jenkins Pipeline Explained
+## Instructions for Creating the Jenkins Pipeline
+
+### The Jenkins Pipeline Explained
 
 This Jenkins pipeline has four main steps: Compile, Test, Package, and Docker Build.
 
