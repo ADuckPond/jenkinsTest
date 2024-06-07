@@ -7,6 +7,8 @@ pipeline {
                 //get petclinic application in main branch
                 git branch: 'main', url: 'https://github.com/ADuckPond/spring-petclinic.git'
                 
+
+                sh './mvnw dependency:purge-local-repository'
                 //compile the application
                 sh './mvnw compile'                    
             }
