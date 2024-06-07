@@ -2,6 +2,11 @@
 
 ## Prerequisites
 
++ For the purposes of this exercise a trial [Artifactory](https://aduckpond.jfrog.io) instance was created and the `pom.xml` was modified to point at repositories within that instance. 
++ Jenkins installed and running with suggested plugins installed. (`DinD` is not recommended for this workflow).
++ OpenJDK version 17.
++ Docker installed and running.
+
 ### Building the Docker Image
 
 To successfully build the Docker image, ensure that the Docker daemon is installed and running in the environment where Jenkins is executing the pipeline. In this example, the pipeline is executed on the localhost where Jenkins and the Docker daemon are installed.
@@ -69,11 +74,11 @@ For more detailed information about the Spring Petclinic application see the fol
 
 The Dockerfile used in the Docker Build step is also included in this repository. It consist of four commands:
 
-+ FROM: Specifies the base image to start from (in this case openjdk:23-ea-jdk-oracle) 
-+ ADD: Brings the contents of the target directory into the container. This is where the executable jar is located after the *Package* step.
-+ WORKDIR: Specifies the directory to switch to and work from (in this case we switch to the location of the files we brought over via ADD).
-+ CMD: Specifies the command to execute when running the container. This command executes the jar file and runs our application.
++ `FROM`: Specifies the base image to start from (in this case openjdk:23-ea-jdk-oracle) 
++ `ADD`: Brings the contents of the target directory into the container. This is where the executable jar is located after the *Package* step.
++ `WORKDIR`: Specifies the directory to switch to and work from (in this case we switch to the location of the files we brought over via `ADD`).
++ `CMD`: Specifies the command to execute when running the container. This command executes the jar file and runs our application.
 
 ### Some Changes to the pom.xml
 
-In an effort to use JFrog Artifactory as a part of the Jenkins pipeline the pom.xml was updated to point to JFrog repositories. This was achieved using a fourteen day trial of Artifactory. As a result, after 6/20/2024 dependencies will likely revert to pulling exclusively from Maven Central.
+In an effort to use JFrog Artifactory as a part of the Jenkins pipeline the `pom.xml` was updated to point to JFrog repositories. This was achieved using a fourteen day trial of Artifactory. As a result, after 6/20/2024 dependencies will likely revert to pulling exclusively from Maven Central.
