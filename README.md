@@ -2,10 +2,11 @@
 
 ## Prerequisites
 
-+ For the purposes of this exercise a trial [Artifactory](https://aduckpond.jfrog.io) instance was created and the `pom.xml` was modified to point at repositories within that instance. 
-+ Jenkins installed and running with suggested plugins installed. (`DinD` is not recommended for this workflow).
-+ OpenJDK version 17.
-+ Docker installed and running.
+- [ ] For the purposes of this exercise a trial [Artifactory](https://aduckpond.jfrog.io) instance was created and the `pom.xml` was modified to point at repositories within that instance. 
+- [ ] Jenkins installed and running with suggested plugins installed. (`DinD` is not recommended for this workflow).
+- [ ] OpenJDK version 17.
+- [ ] Docker installed and running.
+- [ ] Ensure Jenkins has the correct permissions to execute a Docker Build (for details see the `Building the Docker Image` section below).
 
 ### Building the Docker Image
 
