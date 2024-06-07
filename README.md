@@ -53,7 +53,7 @@ For more details on options for deploying a Jenkins pipeline see this page: [Get
 
 To run the container built from this Jenkins pipeline, use the following command on the host where the build was executed:
 
-```docker run -d -p 8081:8080 myPetclinic:latest```
+```docker run -d -p 8081:8080 mypetclinic:latest```
 
 In this example, both the Docker daemon and Jenkins are running on the local machine. As a result, applications and running containers are reachable on localhost. To access the application, open a web browser and navigate to <localhost:8081>.
 
