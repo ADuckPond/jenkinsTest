@@ -26,7 +26,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 //build the docker image using the local Dockerfile
-                sh 'docker build -t myPetclinic:latest .'
+                sh 'docker build -t mypetclinic:latest .'
             }
         }
     }
