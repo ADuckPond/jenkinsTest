@@ -8,6 +8,8 @@
 - Docker installed and running.
 - Ensure Jenkins has the correct permissions to execute a Docker Build (for details see the `Building the Docker Image` section below).
 
+> **Warning:** If you perform the `usermod` command make sure you restart Jenkins.
+
 ### Building the Docker Image
 
 To successfully build the Docker image, ensure that the Docker daemon is installed and running in the environment where Jenkins is executing the pipeline. In this example, the pipeline is executed on the localhost where Jenkins and the Docker daemon are installed.
