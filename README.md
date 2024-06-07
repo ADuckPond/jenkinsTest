@@ -34,13 +34,13 @@ To create the Jenkins pipeline we will copy the contents of the Jenkinsfile into
 2. From the Jenkins Dashboard click the `New Item` button.
 3. Enter a name for your Jenkins pipeline (something like `myPetclinic` should work nicely; this name will be used to reference the project in this example).
 4. Select `Pipeline` and click `OK` to continue to the Pipeline configuration page.
-5. Click on the `Pipeline` tab to the left under `Confiure`.
+5. Click on the `Pipeline` tab to the left under `Configure`.
 6. In the `Pipeline Definition` drop down select `Pipeline script from SCM`.
 7. Select `Git` in the `SCM` drop down.
-8. Add the git url for this repository (<https://github.com/ADuckPond/jenkinsTest.git>) in the `Repository URL` field. (No `Credentials` needed.)
+8. Add the `git url` for this repository (<https://github.com/ADuckPond/jenkinsTest.git>) in the `Repository URL` field. (No `Credentials` needed.)
 9. Update the `Branch Specifier` under the `Branches to build` section to `*/main`.
 10. Scroll to the bottom of the page and click `Save`. This will take you to the `myPetclinic Project` page (if you used that name).
-11. From the `myPetclinic Project` page click the `Build Now` button.
+11. From the `myPetclinic Project` page click the `Build Now` button. This will start a pipeline execution that will generate a docker image that you can run.
 
 For more details on options for deploying a Jenkins pipeline see this page: [Getting started with Pipeline](https://www.jenkins.io/doc/book/pipeline/getting-started/)
 
