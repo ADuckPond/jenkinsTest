@@ -23,6 +23,15 @@ For more detailed information about the Spring Petclinic application see the fol
 
 ## Instructions for Creating the Jenkins Pipeline
 
+To create the Jenkins pipeline we will copy the contents of the Jenkinsfile into a new Jenkins pipeline:
+
+1. Ensure you are logged into Jenkins.
+2. From the Jenkins Dashboard click the `New Item` button.
+3. Enter a name for your Jenkins pipeline (something like `myPetclinic` should work nicely).
+4. Select Pipeline 
+
+For more details on options for deploying a Jenkins pipeline see this page: [Getting started with Pipeline]<https://www.jenkins.io/doc/book/pipeline/getting-started/>
+
 ### The Jenkins Pipeline Explained
 
 This Jenkins pipeline has four main steps: Compile, Test, Package, and Docker Build.
