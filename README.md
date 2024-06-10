@@ -1,5 +1,9 @@
 # Spring Petclinic via Jenkins Pipeline
 
+## Overview
+
+This project uses a Jenkins pipeline to compile, test, package, and build a runnable container for the Spring PetClinic application. (https://github.com/ADuckPond/spring-petclinic) 
+
 ## Prerequisites
 
 - For the purposes of this exercise a trial [Artifactory](https://aduckpond.jfrog.io) instance was created and the `pom.xml` was modified to point at repositories within that instance. 
