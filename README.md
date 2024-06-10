@@ -73,4 +73,4 @@ The Dockerfile used in the Docker Build step is also included in this repository
 
 ### Some Changes to the pom.xml
 
-In an effort to use JFrog Artifactory as a part of the Jenkins pipeline the `pom.xml` was updated to point to JFrog repositories. This was achieved using a fourteen day trial of Artifactory. As a result, after 6/20/2024 dependencies will likely revert to pulling exclusively from Maven Central.
+In an effort to use JFrog Artifactory as a part of the Jenkins pipeline the `pom.xml` was updated to point to JFrog repositories. This was achieved using a fourteen day trial of Artifactory. As a result, after 6/20/2024 dependencies will likely revert to pulling from Jcenter or Maven Central.
